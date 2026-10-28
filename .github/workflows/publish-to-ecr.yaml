@@ -41,8 +41,9 @@ jobs:
           echo "Building Docker image with tag $IMAGE_TAG"
           docker build -t $IMAGE_TAG .
 
-      - name: Download Wiz CLI
+      - name: Download WizCLI
         run: curl -o wizcli https://downloads.wiz.io/v1/wizcli/latest/wizcli-linux-amd64 && chmod +x wizcli
+
 
       - name: Run Wiz CLI image scan
         id: scan
